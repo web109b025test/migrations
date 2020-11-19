@@ -16,14 +16,15 @@ class ProductSeeder extends Seeder
     public function run()
     {
         Product::truncate();
-        Product::create([
-            'title' => '商品1',
-            'price' => 100,
-            'desc' => 'Nice!',
-            'enabled' => true,
-            'sell-at' => Carbon::now(),
-            'cgy-id' => 1,
-        ]);
-
+        for ($i = 0; $i < 10000; $i++) {
+            Product::create([
+                'title' => '商品' . ($i + 1),
+                'price' => rand(100, 5000),
+                'desc' => 'Nice!',
+                'enabled' => rand(0, 1),
+                'sell-at' => Carbon::now(),
+                'cgy-id' => ($i + 1),
+            ]);
+        }
     }
 }
