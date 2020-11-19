@@ -15,13 +15,15 @@ class CreateItemsTable extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
 
-            $table->BigInteger('id');
+            $table->BigInteger('id'); //=id();
             $table->string('title', 50);
             $table->Integer('price')->default(0)->unsigned();
             $table->Text('desc')->nullable();
             $table->boolean('enabled')->default(true);
             $table->Timestamp('sell-at')->nullable();
             $table->BigInteger('cgy-id');
+            $table->timestamps();
+
         });
     }
 
