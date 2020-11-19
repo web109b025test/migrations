@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use App\Models\User;
+use App\Models\Product;
 use Carbon\Carbon;
 use Illuminate\Database\Seeder;
 
@@ -15,12 +15,12 @@ class ProductSeeder extends Seeder
      */
     public function run()
     {
-        User::truncate();
+        Product::truncate();
         Product::create([
             'title' => '商品1',
             'price' => 100,
             'desc' => 'Nice!',
-            'enable' => true,
+            'enabled' => true,
             'sell-at' => Carbon::now(),
             'cgy-id' => 1,
         ]);
