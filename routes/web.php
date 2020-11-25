@@ -55,3 +55,10 @@ Route::get('change/{id}', function ($id) {
     //第二種作法
     // $song = Song::updateOrCreate(['id'=>$song->id],['name'=>'Song99']);
 });
+Route::get('delete/{id}', function ($id) {
+    $product = \App\Models\Product::find($id);
+    //使用資料參考來刪除
+    $product->delete();
+    //使用主鍵來刪除
+    // \App\Models\Product::destroy($product->id);
+});
