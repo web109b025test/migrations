@@ -20,8 +20,8 @@ class CreateProductsTable extends Migration
             $table->Integer('price')->default(0)->unsigned();
             $table->Text('desc')->nullable();
             $table->boolean('enabled')->default(true);
-            $table->Timestamp('sell-at')->nullable();
-            $table->BigInteger('cgy-id');
+            $table->Timestamp('sell_at')->nullable();
+            $table->BigInteger('cgy_id');
             $table->timestamps();
 
         });

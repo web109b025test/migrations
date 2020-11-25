@@ -29,8 +29,8 @@ class ProductFactory extends Factory
             'price' => $faker->numberBetween(500, 5000),
             'desc' => $faker->realText(30),
             'enabled' => rand(0, 1),
-            'sell-at' => Carbon::now()->addDays($faker->numberBetween(-500, 50)),
-            'cgy-id' => $faker->randomDigit,
+            'sell_at' => Carbon::now()->addDays($faker->numberBetween(-500, 50)),
+            'cgy_id' => $faker->randomDigit,
         ];
     }
 }
