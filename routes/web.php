@@ -62,3 +62,4 @@ Route::get('delete/{id}', function ($id) {
     //使用主鍵來刪除
     // \App\Models\Product::destroy($product->id);
 });
+Route::get('/itemdelete/{item}', 'App\Http\Controllers\ItemController@destroy');

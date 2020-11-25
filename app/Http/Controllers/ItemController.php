@@ -23,14 +23,7 @@ class ItemController extends Controller
      */
     public function create()
     {
-        // $item = new Product();
-        // $item->title = '手機一台';
-        // $item->price = '15000';
-        // $item->desc = 'test';
-        // $item->enabled = 1;
-        // $item->sell_at = '2020-01-01';
-        // $item->cgy_id = 2;
-        // $item->save();
+        //
     }
 
     /**
